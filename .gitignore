@@ -2,5 +2,3 @@
 # ignore models
 models
 
-#ignore dataset
-ml-latest-small
