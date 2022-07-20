@@ -5,8 +5,7 @@ from collections import defaultdict
 from operator import itemgetter
 
 #building a trainset from the dataset
-dataset = components.ml_small_rating_to_dataset()
-trainset = dataset.build_full_trainset()
+trainset = components.load_model(constants.TRAINSET)
 
 
 #loading the trained model (matrix)
@@ -51,8 +50,3 @@ for itemID,_ in sorted(candidates.items(), key=itemgetter(1), reverse=True):
 
 for rec in recommendation:
     print("Movie :", rec)
-
-
-
-
-
